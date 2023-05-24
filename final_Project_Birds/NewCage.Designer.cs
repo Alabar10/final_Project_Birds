@@ -52,6 +52,7 @@ namespace final_Project_Birds
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(120, 96);
             this.checkedListBox1.TabIndex = 21;
+            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // textBox4
             // 

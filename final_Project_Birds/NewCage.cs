@@ -16,5 +16,10 @@ namespace final_Project_Birds
         {
             InitializeComponent();
         }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -136,6 +136,7 @@ namespace final_Project_Birds
             this.Controls.Add(this.panel1);
             this.Name = "HomePage";
             this.Text = "HomePage";
+            this.Load += new System.EventHandler(this.HomePage_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

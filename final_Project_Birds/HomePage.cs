@@ -22,5 +22,10 @@ namespace final_Project_Birds
             AddBirds rtt = new AddBirds();
             rtt.Show();
         }
+
+        private void HomePage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

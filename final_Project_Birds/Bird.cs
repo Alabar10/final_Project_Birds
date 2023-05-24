@@ -29,9 +29,6 @@ namespace final_Project_Birds
 
 
         }
-        public Bird()
-        {
-
-        }
+        
     }
 }

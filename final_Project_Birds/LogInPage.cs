@@ -22,7 +22,7 @@ namespace final_Project_Birds
         {
             OleDbConnection gg = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C: //Users//alabr//OneDrive//שולחן העבודה//workbook1.xlsx;Extended Properties='Excel 12.0;HDR=YES;IMEX=1;'");
             gg.Open();
-            OleDbCommand r = new OleDbCommand("SELECT * FROM [Sheet1$] where username=@user and password=@pass", gg);
+            OleDbCommand r = new OleDbCommand("SELECT * FROM [Users] where username=@user and password=@pass", gg);
             r.Parameters.AddWithValue("user", txtUsername.Text);
             r.Parameters.AddWithValue("pass", txtPassword.Text);
             OleDbDataReader read;

@@ -21,9 +21,9 @@ namespace final_Project_Birds
         {
             string codebase = Assembly.GetExecutingAssembly().CodeBase;
             UriBuilder uri = new UriBuilder(codebase);
-            string path = uri.UnescapeDataString(uri.Path);
+            string path = Uri.UnescapeDataString(uri.Path);
             return Path.GetDirectoryName(path);
 
         }
-    }
+    }   
 }
