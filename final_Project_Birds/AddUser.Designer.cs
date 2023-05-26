@@ -32,9 +32,9 @@ namespace final_Project_Birds
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.Username = new System.Windows.Forms.TextBox();
-            this.Password = new System.Windows.Forms.TextBox();
-            this.ID = new System.Windows.Forms.TextBox();
+            this.addusername = new System.Windows.Forms.TextBox();
+            this.addpassword = new System.Windows.Forms.TextBox();
+            this.addID = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -65,29 +65,29 @@ namespace final_Project_Birds
             this.label3.TabIndex = 2;
             this.label3.Text = "Id";
             // 
-            // Username
+            // addusername
             // 
-            this.Username.Location = new System.Drawing.Point(384, 95);
-            this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(119, 26);
-            this.Username.TabIndex = 3;
-            this.Username.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.addusername.Location = new System.Drawing.Point(384, 95);
+            this.addusername.Name = "addusername";
+            this.addusername.Size = new System.Drawing.Size(119, 26);
+            this.addusername.TabIndex = 3;
+            this.addusername.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // Password
+            // addpassword
             // 
-            this.Password.Location = new System.Drawing.Point(384, 161);
-            this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(119, 26);
-            this.Password.TabIndex = 4;
-            this.Password.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.addpassword.Location = new System.Drawing.Point(384, 161);
+            this.addpassword.Name = "addpassword";
+            this.addpassword.Size = new System.Drawing.Size(119, 26);
+            this.addpassword.TabIndex = 4;
+            this.addpassword.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // ID
+            // addID
             // 
-            this.ID.Location = new System.Drawing.Point(384, 213);
-            this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(119, 26);
-            this.ID.TabIndex = 5;
-            this.ID.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.addID.Location = new System.Drawing.Point(384, 213);
+            this.addID.Name = "addID";
+            this.addID.Size = new System.Drawing.Size(119, 26);
+            this.addID.TabIndex = 5;
+            this.addID.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // button1
             // 
@@ -97,6 +97,7 @@ namespace final_Project_Birds
             this.button1.TabIndex = 6;
             this.button1.Text = "Sign In";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // AddUser
             // 
@@ -104,9 +105,9 @@ namespace final_Project_Birds
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.ID);
-            this.Controls.Add(this.Password);
-            this.Controls.Add(this.Username);
+            this.Controls.Add(this.addID);
+            this.Controls.Add(this.addpassword);
+            this.Controls.Add(this.addusername);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -123,9 +124,9 @@ namespace final_Project_Birds
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox Username;
-        private System.Windows.Forms.TextBox Password;
-        private System.Windows.Forms.TextBox ID;
+        private System.Windows.Forms.TextBox addusername;
+        private System.Windows.Forms.TextBox addpassword;
+        private System.Windows.Forms.TextBox addID;
         private System.Windows.Forms.Button button1;
     }
 }
