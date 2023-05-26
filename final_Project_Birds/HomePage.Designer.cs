@@ -75,6 +75,7 @@ namespace final_Project_Birds
             this.button4.TabIndex = 4;
             this.button4.Text = "חיפוש ציפור ";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel2
             // 

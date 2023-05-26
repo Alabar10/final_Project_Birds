@@ -8,42 +8,75 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.OleDb;
 using System.Windows.Forms;
+using System.IO;
+using OfficeOpenXml;
+using LicenseContext = OfficeOpenXml.LicenseContext;
 
 namespace final_Project_Birds
 {
     public partial class LogInPage : Form
     {
+        
+
+
+
         public LogInPage()
         {
             InitializeComponent();
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial; // Set the LicenseContext
+
         }
+      
+        private bool AuthenticateUser(string username, string password)
+        {
+            string excelFilePath = "C:\\Users\\alabr\\source\\repos\\final_Project_Birds\\final_Project_Birds\\workbook_LogIn.xlsx";
+
+            FileInfo fileInfo = new FileInfo(excelFilePath);
+            using (ExcelPackage package = new ExcelPackage(fileInfo))
+            {
+                ExcelWorksheet worksheet = package.Workbook.Worksheets["login"]; // Replace "Sheet1" with the actual name of your worksheet
+
+                if (worksheet != null)
+                {
+                    int rowCount = worksheet.Dimension.Rows;
+                    for (int row = 2; row <= rowCount; row++) // Assuming the data starts from the second row
+                    {
+                        string storedUsername = worksheet.Cells[row,1].Value?.ToString();
+                        string storedPassword = worksheet.Cells[row, 2].Value?.ToString();
+
+                        if (username == storedUsername && password == storedPassword)
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+
+            return false;
+        }
+
+
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OleDbConnection gg = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C: //Users//alabr//OneDrive//שולחן העבודה//workbook1.xlsx;Extended Properties='Excel 12.0;HDR=YES;IMEX=1;'");
-            gg.Open();
-            OleDbCommand r = new OleDbCommand("SELECT * FROM [Users] where username=@user and password=@pass", gg);
-            r.Parameters.AddWithValue("user", txtUsername.Text);
-            r.Parameters.AddWithValue("pass", txtPassword.Text);
-            OleDbDataReader read;
-            read = r.ExecuteReader();
-            if (read.Read())
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
+
+            bool isAuthenticated = AuthenticateUser(username, password);
+
+            if (isAuthenticated)
             {
-                int resultcomp = string.Compare(txtPassword.Text, read.GetValue(1).ToString());
-                if (resultcomp == 0)
-                {
-                    MessageBox.Show("welcome");
-                }
-                else
-                {
-                    MessageBox.Show("incorrect");
-                }
+                //MessageBox.Show("Login successful!");
+                HomePage tr = new HomePage();
+                tr.Show();
             }
             else
             {
-                MessageBox.Show("incor");
+                MessageBox.Show("Invalid username or password.");
             }
-            gg.Close();
+           
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -87,7 +120,8 @@ namespace final_Project_Birds
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            AddUser uo = new AddUser();
+            uo.Show();
         }
     }
 }
