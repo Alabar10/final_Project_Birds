@@ -48,6 +48,7 @@ namespace final_Project_Birds
             this.birdComboBox = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.edit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -217,11 +218,22 @@ namespace final_Project_Birds
             this.comboBox1.TabIndex = 46;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
+            // edit
+            // 
+            this.edit.Location = new System.Drawing.Point(878, 193);
+            this.edit.Name = "edit";
+            this.edit.Size = new System.Drawing.Size(75, 36);
+            this.edit.TabIndex = 47;
+            this.edit.Text = "עריכה";
+            this.edit.UseVisualStyleBackColor = true;
+            this.edit.Click += new System.EventHandler(this.עריכה_Click);
+            // 
             // AddBirds
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(965, 532);
+            this.Controls.Add(this.edit);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.birdComboBox);
@@ -242,7 +254,7 @@ namespace final_Project_Birds
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "AddBirds";
-            this.Text = "AddBirds";
+            this.Text = "עריכה";
             this.Load += new System.EventHandler(this.AddBirds_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -271,5 +283,6 @@ namespace final_Project_Birds
         private System.Windows.Forms.ComboBox birdComboBox;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button edit;
     }
 }

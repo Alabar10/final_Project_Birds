@@ -46,7 +46,7 @@ namespace final_Project_Birds
                 worksheet.Cells[newRow, 3].Value = width;
                 worksheet.Cells[newRow, 4].Value = height;
                 worksheet.Cells[newRow, 5].Value = material;
-               
+
 
 
 
@@ -90,8 +90,8 @@ namespace final_Project_Birds
 
 
             RegisterUser(Serialnum, length, width, height, material);
-        
-    }
+
+        }
         public bool ValidSerialnum(string Serialnum)
         {
             Regex regex = new Regex(@"^[0-9]+$"); // Pattern to match digits only
@@ -177,5 +177,56 @@ namespace final_Project_Birds
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string excelFilePath = "C:\\Users\\alabr\\source\\repos\\final_Project_Birds\\final_Project_Birds\\workbook_LogIn.xlsx"; // Replace with the path to your Excel file
+
+            try
+            {
+                using (ExcelPackage package = new ExcelPackage(new FileInfo(excelFilePath)))
+                {
+                    ExcelWorksheet worksheet = package.Workbook.Worksheets["cages"]; // Replace with the actual worksheet name
+
+                    if (worksheet != null)
+                    {
+                        int rowIndex = 2; // Start from the second row (assuming the headers are in the first row)
+
+                        while (true)
+                        {
+                            DataGridViewRow row = dataGridView1.Rows[rowIndex - 2];
+
+                            // Check if the row is empty or if the first cell is null or empty
+                            if (row.IsNewRow || string.IsNullOrEmpty(Convert.ToString(row.Cells[0].Value)))
+                                break;
+
+                            for (int colIndex = 1; colIndex <= 3; colIndex++) // Assuming there are three columns
+                            {
+                                string value = Convert.ToString(row.Cells[colIndex - 1].Value);
+                                worksheet.Cells[rowIndex, colIndex].Value = value;
+                            }
+
+                            rowIndex++;
+                        }
+
+                        worksheet.Cells.AutoFitColumns(0);
+
+                        package.Save();
+                        MessageBox.Show("Bird details updated successfully.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Worksheet not found.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+        }
     }
+
 }
+    
+
