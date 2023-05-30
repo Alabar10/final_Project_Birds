@@ -16,5 +16,10 @@ namespace final_Project_Birds
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

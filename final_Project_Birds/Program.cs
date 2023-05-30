@@ -16,7 +16,7 @@ namespace final_Project_Birds
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddCage());
+            Application.Run(new CageSearch());
         }
     }
 }

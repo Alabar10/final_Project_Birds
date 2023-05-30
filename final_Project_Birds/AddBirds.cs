@@ -216,5 +216,10 @@ namespace final_Project_Birds
         {
 
         }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
