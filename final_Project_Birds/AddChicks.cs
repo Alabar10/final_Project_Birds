@@ -140,6 +140,11 @@ namespace final_Project_Birds
                                 MessageBox.Show($"Chick '{chickSerialNum}' has been added to bird '{parentSpecies}'.");
                                 return;
                             }
+                            else
+                            {
+                                MessageBox.Show($"Parent bird with number '{parentNumber}' not found in the Excel file.");
+                                return;
+                            }
                         }
 
                         MessageBox.Show($"Parent bird with number '{parentNumber}' not found in the Excel file.");
@@ -208,6 +213,11 @@ namespace final_Project_Birds
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

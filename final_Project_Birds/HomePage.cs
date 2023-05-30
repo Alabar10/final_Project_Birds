@@ -32,5 +32,45 @@ namespace final_Project_Birds
         {
             
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AddCage r = new AddCage();
+            r.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            AddChicks tt = new AddChicks();
+            tt.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            BirdColor r = new BirdColor();
+            r.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
