@@ -31,22 +31,22 @@ namespace final_Project_Birds
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,6 +68,30 @@ namespace final_Project_Birds
             this.panel1.Size = new System.Drawing.Size(194, 514);
             this.panel1.TabIndex = 3;
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Black;
+            this.button7.ForeColor = System.Drawing.Color.MediumOrchid;
+            this.button7.Location = new System.Drawing.Point(3, 424);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(187, 51);
+            this.button7.TabIndex = 7;
+            this.button7.Text = "בחירת צבע לציפור";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Black;
+            this.button6.ForeColor = System.Drawing.Color.MediumOrchid;
+            this.button6.Location = new System.Drawing.Point(3, 375);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(188, 43);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "הוספת גוזל";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.Black;
@@ -78,6 +102,7 @@ namespace final_Project_Birds
             this.button5.TabIndex = 5;
             this.button5.Text = " חיפוש כלוב";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -101,6 +126,16 @@ namespace final_Project_Birds
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(194, 78);
             this.panel2.TabIndex = 3;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::final_Project_Birds.Properties.Resources.pppp;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(187, 85);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -151,40 +186,6 @@ namespace final_Project_Birds
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Black;
-            this.button6.ForeColor = System.Drawing.Color.MediumOrchid;
-            this.button6.Location = new System.Drawing.Point(3, 375);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(188, 43);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "הוספת גוזל";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Black;
-            this.button7.ForeColor = System.Drawing.Color.MediumOrchid;
-            this.button7.Location = new System.Drawing.Point(3, 424);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(187, 51);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "בחירת צבע לציפור";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::final_Project_Birds.Properties.Resources.pppp;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(187, 85);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
             // pictureBox3
             // 
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -205,13 +206,14 @@ namespace final_Project_Birds
             this.ClientSize = new System.Drawing.Size(1031, 532);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox3);
+            this.MaximizeBox = false;
             this.Name = "HomePage";
             this.Text = "HomePage";
             this.Load += new System.EventHandler(this.HomePage_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

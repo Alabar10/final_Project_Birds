@@ -15,6 +15,7 @@ namespace final_Project_Birds
         public HomePage()
         {
             InitializeComponent();
+          
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -30,7 +31,8 @@ namespace final_Project_Birds
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
+            BirdSearch r = new BirdSearch();
+            r.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -71,6 +73,12 @@ namespace final_Project_Birds
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            CageSearch t = new CageSearch();
+            t.Show();
         }
     }
 }

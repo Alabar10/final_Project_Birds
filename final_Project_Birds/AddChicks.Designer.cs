@@ -159,6 +159,7 @@ namespace final_Project_Birds
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.ForeColor = System.Drawing.Color.Black;
+            this.MaximizeBox = false;
             this.Name = "AddChicks";
             this.Text = "AddChicks";
             this.Load += new System.EventHandler(this.AddChicks_Load);

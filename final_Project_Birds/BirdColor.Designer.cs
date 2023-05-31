@@ -173,6 +173,7 @@ namespace final_Project_Birds
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+            this.MaximizeBox = false;
             this.Name = "BirdColor";
             this.Text = "BirdColor";
             this.Load += new System.EventHandler(this.BirdColor_Load);

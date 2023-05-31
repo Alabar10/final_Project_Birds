@@ -85,6 +85,7 @@ namespace final_Project_Birds
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(-4, 207);
             this.dataGridView1.Name = "dataGridView1";
@@ -97,6 +98,7 @@ namespace final_Project_Birds
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.BlueViolet;
             this.ClientSize = new System.Drawing.Size(844, 497);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
@@ -104,6 +106,7 @@ namespace final_Project_Birds
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
+            this.MaximizeBox = false;
             this.Name = "CageSearch";
             this.Text = "CageSearch";
             this.Load += new System.EventHandler(this.CageSearch_Load);
