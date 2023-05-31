@@ -211,6 +211,19 @@
     <Compile Include="BirdColor.Designer.cs">
       <DependentUpon>BirdColor.cs</DependentUpon>
     </Compile>
+    <Compile Include="BirdSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BirdSearch.Designer.cs">
+      <DependentUpon>BirdSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cage.cs" />
+    <Compile Include="CageSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CageSearch.Designer.cs">
+      <DependentUpon>CageSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExcelManager.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -247,6 +260,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BirdColor.resx">
       <DependentUpon>BirdColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BirdSearch.resx">
+      <DependentUpon>BirdSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CageSearch.resx">
+      <DependentUpon>CageSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
