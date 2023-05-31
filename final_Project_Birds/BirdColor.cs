@@ -64,8 +64,8 @@ namespace final_Project_Birds
             Excel.Workbook workbook = excelApp.Workbooks.Open("C:\\Users\\alabr\\source\\repos\\final_Project_Birds\\final_Project_Birds\\workbook_LogIn.xlsx");
 
             // Get the source and target sheets
-            Excel.Worksheet sourceSheet = workbook.Sheets["birds"];
-            Excel.Worksheet targetSheet = workbook.Sheets["color"];
+            Excel.Worksheet sourceSheet = workbook.Sheets["color"];
+            Excel.Worksheet targetSheet = workbook.Sheets["birds"];
 
             // Find the serial number in the source sheet
             Excel.Range serialRange = sourceSheet.UsedRange.Columns[1];

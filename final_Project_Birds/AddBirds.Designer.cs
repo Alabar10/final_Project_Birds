@@ -39,7 +39,6 @@ namespace final_Project_Birds
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -49,6 +48,7 @@ namespace final_Project_Birds
             this.subspeciesComboBox = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.עריכה = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,7 +114,7 @@ namespace final_Project_Birds
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(519, 73);
+            this.label4.Location = new System.Drawing.Point(519, 123);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 20);
             this.label4.TabIndex = 6;
@@ -124,7 +124,7 @@ namespace final_Project_Birds
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(494, 29);
+            this.label5.Location = new System.Drawing.Point(504, 72);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(114, 20);
             this.label5.TabIndex = 7;
@@ -148,15 +148,6 @@ namespace final_Project_Birds
             this.label7.TabIndex = 9;
             this.label7.Text = "תת זן";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(519, 120);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 20);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "מספר כלוב";
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(651, 35);
@@ -166,10 +157,11 @@ namespace final_Project_Birds
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(356, 117);
+            this.textBox8.Location = new System.Drawing.Point(356, 35);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(123, 26);
             this.textBox8.TabIndex = 12;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // textBox10
             // 
@@ -180,7 +172,7 @@ namespace final_Project_Birds
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(356, 29);
+            this.textBox3.Location = new System.Drawing.Point(356, 72);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(123, 26);
             this.textBox3.TabIndex = 14;
@@ -188,7 +180,7 @@ namespace final_Project_Birds
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(356, 70);
+            this.comboBox1.Location = new System.Drawing.Point(356, 115);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(123, 28);
             this.comboBox1.TabIndex = 15;
@@ -227,12 +219,23 @@ namespace final_Project_Birds
             this.עריכה.UseVisualStyleBackColor = true;
             this.עריכה.Click += new System.EventHandler(this.עריכה_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(508, 33);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(93, 31);
+            this.button3.TabIndex = 20;
+            this.button3.Text = "חיפוש כלוב";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // AddBirds
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkViolet;
             this.ClientSize = new System.Drawing.Size(942, 517);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.עריכה);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.subspeciesComboBox);
@@ -242,7 +245,6 @@ namespace final_Project_Birds
             this.Controls.Add(this.textBox10);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -274,7 +276,6 @@ namespace final_Project_Birds
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox10;
@@ -284,5 +285,6 @@ namespace final_Project_Birds
         private System.Windows.Forms.ComboBox subspeciesComboBox;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button עריכה;
+        private System.Windows.Forms.Button button3;
     }
 }
