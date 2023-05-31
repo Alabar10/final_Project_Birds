@@ -48,6 +48,7 @@ namespace final_Project_Birds
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.BlueViolet;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(28, 241);
             this.dataGridView1.Name = "dataGridView1";
@@ -176,6 +177,7 @@ namespace final_Project_Birds
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkViolet;
             this.ClientSize = new System.Drawing.Size(920, 558);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);

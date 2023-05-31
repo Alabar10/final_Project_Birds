@@ -68,9 +68,12 @@ namespace final_Project_Birds
 
             if (isAuthenticated)
             {
+                LogInPage t = new LogInPage();
+                t.Close();
                 //MessageBox.Show("Login successful!");
-                HomePage tr = new HomePage();
-                tr.Show();
+                var homepage = new HomePage();
+                homepage.Show();
+                
             }
             else
             {

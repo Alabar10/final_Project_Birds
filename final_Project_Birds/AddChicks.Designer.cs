@@ -90,6 +90,7 @@ namespace final_Project_Birds
             this.label2.Size = new System.Drawing.Size(71, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "מין הגוזל";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -144,6 +145,7 @@ namespace final_Project_Birds
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkOrchid;
             this.ClientSize = new System.Drawing.Size(890, 528);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dateTimePicker1);
@@ -156,6 +158,7 @@ namespace final_Project_Birds
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "AddChicks";
             this.Text = "AddChicks";
             this.Load += new System.EventHandler(this.AddChicks_Load);
